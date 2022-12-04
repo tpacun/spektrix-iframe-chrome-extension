@@ -1,0 +1,143 @@
+/* For adding tooltips - upload via Website Admin */
+
+
+/* Colors for each category - edit here, will apply to all rules*/
+
+:root {
+  --tooltip-color-uneditable:#444B55;
+  --tooltip-color-argument:#F18F01;
+  --tooltip-color-admin:#409BD6;
+  --tooltip-color-editable:#72A23F;
+  --tooltip-color-conditional:#208844;
+}
+
+/* Tooltip styling */
+
+*[data-tooltip-uneditable]:hover,
+*[data-tooltip-argument]:hover,
+*[data-tooltip-admin]:hover,
+*[data-tooltip-editable]:hover,
+*[data-tooltip-conditional]:hover {
+  border-width: 5px;
+}
+
+*[data-tooltip-uneditable]:hover:before,
+*[data-tooltip-argument]:hover:before,
+*[data-tooltip-admin]:hover:before,
+*[data-tooltip-editable]:hover:before,
+*[data-tooltip-conditional]:hover:before {
+  max-width: 33%;
+}
+
+*[data-tooltip-uneditable] {
+  border: 2px solid var(--tooltip-color-uneditable);
+}
+
+*[data-tooltip-uneditable]:hover:before {
+  content: attr(data-tooltip-uneditable);
+  position: absolute;
+  padding: 5px 10px;
+  margin: 0 0 0 0;
+right: 0px;
+  background: var(--tooltip-color-uneditable);
+  color: white;
+  border-radius: 3px;
+}
+
+*[data-tooltip-argument] {
+  border: 2px solid var(--tooltip-color-argument);
+}
+
+*[data-tooltip-argument]:hover:before {
+  content: attr(data-tooltip-argument);
+  position: absolute;
+  padding: 5px 10px;
+  margin: 0 0 0 0;
+right: 0px;
+  background: var(--tooltip-color-argument);
+  color: white;
+  border-radius: 3px;
+}
+
+*[data-tooltip-admin] {
+  border: 2px solid var(--tooltip-color-admin);
+}
+
+*[data-tooltip-admin]:hover:before {
+  content: attr(data-tooltip-admin);
+  position: absolute;
+  padding: 5px 10px;
+  margin: 0 0 0 0;
+right: 0px;
+  background: var(--tooltip-color-admin);
+  color: white;
+  border-radius: 3px;
+}
+
+*[data-tooltip-editable] {
+  border: 2px solid var(--tooltip-color-editable);
+}
+
+*[data-tooltip-editable]:hover:before {
+  content: attr(data-tooltip-editable);
+  position: absolute;
+  padding: 5px 10px;
+  margin: 0 0 0 0;
+right: 0px;
+  background: var(--tooltip-color-editable);
+  color: white;
+  border-radius: 3px;
+}
+
+*[data-tooltip-conditional] {
+  border: 2px solid var(--tooltip-color-conditional);
+}
+
+*[data-tooltip-conditional]:hover:before {
+    content: attr(data-tooltip-conditional);
+    position: absolute;
+    padding: 5px 10px;
+    margin: 0 0 0 0;
+right: 0px;
+    background: var(--tooltip-color-conditional);
+    color: white;
+    border-radius: 3px;
+  }
+
+/* Other Formatting */
+
+* {
+  margin: 5px;
+}
+
+.Event_Text {
+  display:flex;
+  flex-direction: column;
+}
+
+.SpektrixFooter {
+  margin-bottom: 50px;
+  position: static;
+}
+
+.urlTitle {
+  color: white;
+  background-color: var(--tooltip-color-uneditable);
+  border: 1px solid black;
+}
+
+ul.MonthList.Options > li {
+  display: inline;
+}
+
+/* EventCalendar */
+
+div.EventsCalendar.SpektrixPage > table td {
+  border: 1px solid black;
+  width: 14%;
+  vertical-align: top;
+}
+
+td.Date.Inactive {
+  background: lightgray;
+}
